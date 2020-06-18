@@ -10,7 +10,7 @@ import entities.enums.OrderStatus;
 public class Order {
 	
 	private static SimpleDateFormat sdf = new SimpleDateFormat ("dd/MM/yyyy HH:mm:ss");
-	private static SimpleDateFormat sdf1 = new SimpleDateFormat ("dd/MM/yyyy");
+	
 	
 	private Date moment;
 	private OrderStatus status;
@@ -19,7 +19,7 @@ public class Order {
 	
 	/* Variavel é instanciada assim quando ela possui varios itens */
 	private List<OrderItem>  items = new ArrayList<>();
-	
+	 
 	/* Construtores */
 	public Order () {
 	}
@@ -91,9 +91,7 @@ public class Order {
 		sb.append("Order status: ");
 		sb.append(status + "\n");
 		sb.append("Client: ");
-		sb.append(client.getName());
-		sb.append("(" + sdf1.format(client.getBirthDate()) + ") - ");
-		sb.append(client.getEmail() + "\n");
+		sb.append(client + "\n");
 		sb.append("Order items:\n");
 		for (OrderItem item: items) {
 		sb.append(item + "\n");	

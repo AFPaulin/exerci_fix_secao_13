@@ -18,13 +18,13 @@ public class Program {
 
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
-		SimpleDateFormat sdf = new SimpleDateFormat("DD/MM/YYYY");
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 		
 		System.out.println("Enter client data:");
 		System.out.print("Name: ");
 		String clientName = sc.nextLine();
 		System.out.print("Email: ");
-		String emailClient = sc.nextLine();
+		String emailClient = sc.next();
 		System.out.print("Birth date (DD/MM/YYYY): ");
 		Date birthdate = sdf.parse(sc.next());
 		
@@ -54,7 +54,7 @@ public class Program {
 		System.out.println();
 		System.out.print(order);
 		
-		
+		sc.close();
 	}
 
 }
